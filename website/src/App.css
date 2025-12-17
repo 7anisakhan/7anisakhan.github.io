@@ -1,0 +1,52 @@
+body {
+
+    margin: 0;
+    font-family: Inter, sans-serif;
+    background-color: #00260f;
+    color: #FFFCEB;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.name {
+    font-family: "Oswald", sans-serif;
+    font-size: 3rem;
+    letter-spacing: 0.03em;
+}
+
+
+h1 {
+    color: #FFFCEB;
+}
+
+h2 {
+    color: #FFFCEB;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    padding: 2rem;
+    text-align: center;
+    box-sizing: border-box;
+ 
+   
+
+}
+
+
+
+.page {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
