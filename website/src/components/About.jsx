@@ -3,7 +3,7 @@ function About() {
         <section>
            
             <p>
-                Electrical engineering @ University of Waterloo
+                Electrical Engineering Student @ University of Waterloo
                 
             </p>
         </section>
