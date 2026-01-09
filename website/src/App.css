@@ -23,6 +23,7 @@ h1 {
 
 h2 {
     color: #FFFCEB;
+    font-size: 40px;
 }
 
 .container {
@@ -122,3 +123,23 @@ h2 {
 .skills-category {
     text-align: center;
 }
+
+.contact-button,
+.contact-button:visited {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #0f172a;
+    background-color: #FFFCEB;
+    border-radius: 999px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+    .contact-button:hover {
+        transform: scale(1.1);
+        background-color: #82B093;
+        color: #0f172a;
+    }
