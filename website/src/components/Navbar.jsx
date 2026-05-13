@@ -1,23 +1,34 @@
-import { Link } from "react-router-dom";
-
+﻿import { Link } from "react-router-dom";
+import { useState } from "react";
 function Navbar() {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
         <nav className="navbar">
-            <ul className="nav-links">
+
+            <button
+                className="hamburger"
+                onClick={() => setIsOpen(!isOpen)}
+                aria-label="Toggle navigation"
+            >
+                {isOpen ? "✕" : "☰"}             
+            </button>
+
+            <ul className={`nav-links ${isOpen ? "active" : ""}`}>
                 <li>
-                    <Link to="/">About</Link>
+                    <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
                 </li>
                 <li>
-                    <Link to="/projects">Projects</Link>
+                    <Link to="/About" onClick={() => setIsOpen(false)}>About</Link>
                 </li>
                 <li>
-                    <Link to="/skills">Skills</Link>
+                    <Link to="/projects" onClick={() => setIsOpen(false)}>Projects</Link>
                 </li>
                 <li>
-                    <Link to="/resume">Resume</Link>
+                    <Link to="/skills" onClick={() => setIsOpen(false)}>Skills</Link>
                 </li>
                 <li>
-                    <Link to="/contact">Contact</Link>
+                    <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
                 </li>
             </ul>
         </nav>
