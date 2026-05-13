@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import About from "./components/About";
+import Home from "./components/Home";
 import SocialLinks from "./components/SocialLinks";
-import Skills from "./pages/Skills";
-import Projects from "./pages/Projects";
-import Resume from "./pages/Resume";
-import Contact from "./pages/Contact";
+import Skills from "./Pages/Skills";
+import Projects from "./Pages/Projects";
+import Contact from "./Pages/Contact";
+import About from "./Pages/About";
 import "./App.css";
 
 function App() {
@@ -19,8 +19,8 @@ function App() {
                     path="/"
                     element={
                         <div className="homepage">
-                            <h1 className="name">Anisa Khan</h1>
-                            <About />
+                            {/* <h1 className="name">Anisa Khan</h1> */}
+                            <Home />
                             <SocialLinks />
                         </div>
                     }
@@ -46,15 +46,7 @@ function App() {
                     }
                 />
 
-                {/* Resume page */}
-                <Route
-                    path="/resume"
-                    element={
-                        <div className="page">
-                            <Resume />
-                        </div>
-                    }
-                />
+               
 
                 {/* Contact page */}
                 <Route
@@ -62,6 +54,16 @@ function App() {
                     element={
                         <div className="page">
                             <Contact />
+                        </div>
+                    }
+                />
+
+                {/* About page */}
+                <Route
+                    path="/about"
+                    element={
+                        <div className="page">
+                            <About />
                         </div>
                     }
                 />
