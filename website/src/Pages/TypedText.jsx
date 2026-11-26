@@ -1,7 +1,7 @@
 import { useState, useEffect, useLayoutEffect, useRef } from "react";
 
 export default function TypedText() {
-    const phrase = " in my 1B term and seeking Fall 2026 internships";
+    const phrase = " Electrical Engineering Intern at DIALOG";
     const [displayed, setDisplayed] = useState("");
     const [charIndex, setCharIndex] = useState(0);
     const [done, setDone] = useState(false);
