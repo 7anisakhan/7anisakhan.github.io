@@ -1,3 +1,11 @@
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 60px;
+}
+
 body {
     margin: 0;
     font-family: Inter, sans-serif;
@@ -92,13 +100,15 @@ h2 {
 .navbar {
     width: 100%;
     background-color: #001f0a;
-    padding: 1rem 2rem;
+    padding: 1rem;
+    min-height: 60px;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; 
+    align-items: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
@@ -122,7 +132,7 @@ h2 {
         }
 
 .hamburger {
-    display: none;
+    display: block;
     font-size: 26px;
     color: #FFFCEB;
     cursor: pointer;
@@ -268,7 +278,7 @@ h2 {
         padding-left: 1.2rem; 
     }
 
-@media (max-width: 768px) {
+
 
     .navbar {
         justify-content: flex-end;
@@ -281,18 +291,21 @@ h2 {
         display: block;
     }
 
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background-color: #001f0a;
-        text-align: center;
-        gap: 0;
-    }
+.nav-links {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #001f0a;
+    text-align: center;
+    gap: 0;
+}
 
         .nav-links li {
             padding: 1rem 0;
@@ -305,16 +318,17 @@ h2 {
             display: flex;
         }
 
+@media (max-width: 768px) {
     .skills-grid {
         grid-template-columns: 1fr;
     }
+
 
     .page {
         padding: 80px 1rem 1rem;
     }
 
     .about {
-       
         padding-bottom: 0.8rem;
         padding-inline: 1rem;
         box-sizing: border-box;
@@ -322,7 +336,6 @@ h2 {
     }
 
     #about {
-       
         max-width: 100%;
     }
 

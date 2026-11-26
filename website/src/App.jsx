@@ -10,65 +10,30 @@ import "./App.css";
 
 function App() {
     return (
-        <BrowserRouter>
+        <>
             <Navbar />
 
-            <Routes>
-                {/* Homepage: About + SocialLinks, vertically centered */}
-                <Route
-                    path="/"
-                    element={
-                        <div className="homepage">
-                            {/* <h1 className="name">Anisa Khan</h1> */}
-                            <Home />
-                            <SocialLinks />
-                        </div>
-                    }
-                />
+            <section id="home" className="homepage">
+                <Home />
+                <SocialLinks />
+            </section>
 
-                {/* Skills page */}
-                <Route
-                    path="/skills"
-                    element={
-                        <div className="page">
-                            <Skills />
-                        </div>
-                    }
-                />
+            <section id="about" className="page">
+                <About />
+            </section>
 
-                {/* Projects page */}
-                <Route
-                    path="/projects"
-                    element={
-                        <div className="page">
-                            <Projects />
-                        </div>
-                    }
-                />
+            <section id="skills" className="page">
+                <Skills />
+            </section>
 
-               
+            <section id="projects" className="page">
+                <Projects />
+            </section>
 
-                {/* Contact page */}
-                <Route
-                    path="/contact"
-                    element={
-                        <div className="page">
-                            <Contact />
-                        </div>
-                    }
-                />
-
-                {/* About page */}
-                <Route
-                    path="/about"
-                    element={
-                        <div className="page">
-                            <About />
-                        </div>
-                    }
-                />
-            </Routes>
-        </BrowserRouter>
+            <section id="contact" className="page">
+                <Contact />
+            </section>
+        </>
     );
 }
 

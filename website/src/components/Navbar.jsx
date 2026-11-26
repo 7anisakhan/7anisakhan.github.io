@@ -1,5 +1,5 @@
-﻿import { Link } from "react-router-dom";
-import { useState } from "react";
+﻿import { useState } from "react";
+
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -11,24 +11,24 @@ function Navbar() {
                 onClick={() => setIsOpen(!isOpen)}
                 aria-label="Toggle navigation"
             >
-                {isOpen ? "✕" : "☰"}             
+                {isOpen ? "✕" : "☰"}
             </button>
 
             <ul className={`nav-links ${isOpen ? "active" : ""}`}>
                 <li>
-                    <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
+                    <a href="#home" onClick={() => setIsOpen(false)}>Home</a>
                 </li>
                 <li>
-                    <Link to="/About" onClick={() => setIsOpen(false)}>About</Link>
+                    <a href="#about" onClick={() => setIsOpen(false)}>About</a>
                 </li>
                 <li>
-                    <Link to="/projects" onClick={() => setIsOpen(false)}>Projects</Link>
+                    <a href="#projects" onClick={() => setIsOpen(false)}>Projects</a>
                 </li>
                 <li>
-                    <Link to="/skills" onClick={() => setIsOpen(false)}>Skills</Link>
+                    <a href="#skills" onClick={() => setIsOpen(false)}>Skills</a>
                 </li>
                 <li>
-                    <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
+                    <a href="#contact" onClick={() => setIsOpen(false)}>Contact</a>
                 </li>
             </ul>
         </nav>
