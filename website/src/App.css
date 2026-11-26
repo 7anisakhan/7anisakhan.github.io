@@ -99,6 +99,7 @@ h2 {
 
 .navbar {
     width: 100%;
+    box-sizing: border-box;
     background-color: #001f0a;
     padding: 1rem;
     min-height: 60px;
@@ -107,7 +108,7 @@ h2 {
     left: 0;
     z-index: 100;
     display: flex;
-    justify-content: flex-end; 
+    justify-content: flex-end;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
@@ -223,7 +224,8 @@ h2 {
     padding: 0.5rem 1.25rem;
     border-radius: 999px;
     width: 100%;
-    color:#82B093 ;
+    color: #82B093;
+    box-sizing: border-box;
 }
     .about-category p {
         
