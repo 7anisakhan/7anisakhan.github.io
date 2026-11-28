@@ -1,10 +1,9 @@
 import { useState, useEffect, useLayoutEffect, useRef } from "react";
 
-export default function TypedText() {
+export default function TypedText({ start = true }) {
     const phrase = " Electrical Engineering Intern at DIALOG";
     const [displayed, setDisplayed] = useState("");
     const [charIndex, setCharIndex] = useState(0);
-    const [done, setDone] = useState(false);
     const [width, setWidth] = useState(0);
     const [ready, setReady] = useState(false);
     const measureRef = useRef(null);
@@ -16,9 +15,10 @@ export default function TypedText() {
     }, []);
 
     useEffect(() => {
+        if (!start) return;
         const delay = setTimeout(() => setReady(true), 1000);
         return () => clearTimeout(delay);
-    }, []);
+    }, [start]);
 
     useEffect(() => {
         if (!ready) return;
@@ -28,11 +28,10 @@ export default function TypedText() {
                 setCharIndex(c => c + 1);
             }, 70);
             return () => clearTimeout(timeout);
-        } else {
-            setDone(true);
         }
     }, [charIndex, ready]);
 
+    const done = charIndex >= phrase.length;
     const isMobile = window.innerWidth < 768;
 
     return (
